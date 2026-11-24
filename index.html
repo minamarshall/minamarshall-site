@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mina Marshall – Funny Small-Town Cozy Mysteries</title>
+<meta name="description" content="Mina Marshall writes the Dorothy May Mysteries: funny, clean small-town cozy mysteries set in Port Constance, Ohio, 1999. Book 1, Watching Paint Dry, out December 1, 2026.">
+<meta property="og:title" content="Mina Marshall – The Dorothy May Mysteries">
+<meta property="og:description" content="Funny small-town cozy mysteries. Book 1, Watching Paint Dry, out December 1.">
+<meta property="og:image" content="https://minamarshall.com/images/watching-paint-dry.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --night: #221544;
+    --night-2: #2f1f5c;
+    --gold: #f2c94c;
+    --gold-deep: #c99a1e;
+    --cream: #faf4e4;
+    --paper: #fffaf0;
+    --ink: #2a2233;
+    --muted: #6b6075;
+    --burgundy: #6e1220;
+    --radius: 10px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font: 18px/1.65 "Source Sans 3", system-ui, sans-serif;
+  }
+  h1, h2, h3 { font-family: "Libre Baskerville", Georgia, serif; line-height: 1.25; margin: 0 0 .5em; }
+  a { color: inherit; }
+  img { max-width: 100%; height: auto; display: block; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+  /* header */
+  header { background: var(--night); color: var(--cream); }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 20px; max-width: 1080px; margin: 0 auto; }
+  .brand { font-family: "Libre Baskerville", serif; font-size: 1.35rem; text-decoration: none; letter-spacing: .02em; }
+  .brand span { color: var(--gold); }
+  .nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; font-weight: 600; font-size: .95rem; }
+  .nav ul a { text-decoration: none; opacity: .9; }
+  .nav ul a:hover { color: var(--gold); opacity: 1; }
+
+  /* hero */
+  .hero { background: radial-gradient(ellipse at 70% 0%, var(--night-2), var(--night) 70%); color: var(--cream); padding: 40px 0 72px; }
+  .hero-grid { display: grid; grid-template-columns: minmax(220px, 360px) 1fr; gap: 56px; align-items: center; }
+  .cover { border-radius: 4px; box-shadow: 0 18px 50px rgba(0,0,0,.5); transform: rotate(-1.5deg); }
+  .eyebrow { color: var(--gold); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: .82rem; margin-bottom: 10px; }
+  .hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); color: #fff; }
+  .hook { font-family: "Libre Baskerville", serif; font-style: italic; color: var(--gold); font-size: 1.2rem; margin: 0 0 1em; }
+  .hero p { margin: 0 0 1em; max-width: 58ch; }
+  .release { display: inline-block; margin: 6px 0 18px; padding: 4px 12px; border: 1px solid var(--gold); border-radius: 999px; color: var(--gold); font-weight: 600; font-size: .9rem; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-block; padding: 12px 20px; border-radius: var(--radius); font-weight: 600; text-decoration: none; transition: transform .15s, background .15s; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-gold { background: var(--gold); color: var(--night); }
+  .btn-gold:hover { background: #ffd966; }
+  .btn-outline { border: 2px solid rgba(250,244,228,.6); color: var(--cream); }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+  .btn[aria-disabled="true"] { opacity: .55; pointer-events: none; }
+  .small { font-size: .88rem; opacity: .8; margin-top: 12px; }
+
+  /* newsletter */
+  .newsletter { position: relative; color: #fff; text-align: center; padding: 96px 0; overflow: hidden; }
+  .newsletter::before { content: ""; position: absolute; inset: 0; background: url("images/rialto-mural.jpg") center 30% / cover no-repeat; }
+  .newsletter::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(34,21,68,.78), rgba(34,21,68,.88)); }
+  .newsletter .wrap { position: relative; z-index: 1; max-width: 720px; }
+  .newsletter h2 { font-size: clamp(1.6rem, 3.5vw, 2.3rem); }
+  .newsletter h2 em { color: var(--gold); }
+  .newsletter p { margin: 0 auto 1.4em; max-width: 56ch; }
+
+  /* series */
+  section.block { padding: 80px 0; }
+  .section-title { text-align: center; margin-bottom: 8px; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+  .section-sub { text-align: center; color: var(--muted); margin: 0 auto 44px; max-width: 60ch; }
+  .books { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .book { text-align: center; }
+  .book .art { aspect-ratio: 5 / 8; border-radius: 4px; overflow: hidden; margin-bottom: 18px; box-shadow: 0 10px 30px rgba(34,21,68,.25); }
+  .book .art img { width: 100%; height: 100%; object-fit: cover; }
+  .placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 24px;
+    background: linear-gradient(160deg, var(--night-2), var(--night)); color: var(--cream); font-family: "Libre Baskerville", serif; }
+  .placeholder .t { font-size: 1.3rem; color: var(--gold); }
+  .placeholder .s { font-size: .8rem; letter-spacing: .15em; text-transform: uppercase; opacity: .75; font-family: "Source Sans 3", sans-serif; }
+  .daisy { width: 38px; height: 38px; }
+  .book h3 { font-size: 1.15rem; margin-bottom: 4px; }
+  .book .num { color: var(--gold-deep); font-weight: 600; font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; }
+  .book p { color: var(--muted); font-size: .95rem; margin: 6px 0 12px; }
+  .book a.more { color: var(--burgundy); font-weight: 600; }
+
+  /* about */
+  .about { background: var(--cream); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: center; }
+  .about img { border-radius: var(--radius); box-shadow: 0 12px 36px rgba(42,34,51,.18); }
+  .about h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); }
+  .about p { margin: 0 0 1em; }
+
+  footer { background: var(--night); color: var(--cream); padding: 40px 0; text-align: center; font-size: .95rem; }
+  footer .links { display: flex; justify-content: center; gap: 24px; margin-bottom: 14px; font-weight: 600; }
+  footer a { text-decoration: none; }
+  footer a:hover { color: var(--gold); }
+  footer .fine { opacity: .6; font-size: .85rem; }
+
+  @media (max-width: 760px) {
+    body { font-size: 17px; }
+    .nav ul { gap: 14px; font-size: .88rem; }
+    .hero { padding-top: 24px; }
+    .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 32px; }
+    .hero-grid .cover-col { max-width: 240px; margin: 0 auto; }
+    .books { grid-template-columns: 1fr; max-width: 300px; margin: 0 auto; }
+    .newsletter { padding: 72px 0; }
+    section.block { padding: 60px 0; }
+  }
+  @media (max-width: 420px) { .nav ul li:first-child { display: none; } }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="#top">Mina <span>Marshall</span></a>
+    <ul>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#newsletter">Free novella</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- HERO: Book 1 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-col">
+        <img class="cover" src="images/watching-paint-dry.jpg" width="700" height="1120"
+             alt="Cover of Watching Paint Dry, a Dorothy May Mystery by Mina Marshall">
+      </div>
+      <div>
+        <div class="eyebrow">A Dorothy May Mystery · Book 1</div>
+        <h1>Watching Paint Dry</h1>
+        <p class="hook">Some women retire to the garden. Dotty Carver retired to the head of a police procession.</p>
+        <p>Port Constance, Ohio, 1999. Newly retired from the county courthouse, Dotty takes the strangest temp job in town: sitting up all night beside a wet mural at the restored Rialto Theatre. She lasts one night before the manager is found dead in the orchestra pit.</p>
+        <p>The police say he fell. Dotty heard something at 2:10 a.m. that says otherwise. Unfortunately for whoever did it, Dotty spent three decades as a court stenographer, listening to people with something to hide.</p>
+        <span class="release">Out December 1, 2026 · $0.99 launch price</span>
+        <div class="buttons">
+          <!-- TODO: replace each href="#" with the Amazon link once KDP approves, and delete aria-disabled -->
+          <a class="btn btn-gold" href="#" aria-disabled="true">Kindle</a>
+          <a class="btn btn-outline" href="#" aria-disabled="true">Paperback</a>
+          <a class="btn btn-outline" href="#" aria-disabled="true">Large Print</a>
+        </div>
+        <p class="small">Free to read with Kindle Unlimited.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter" id="newsletter">
+    <div class="wrap">
+      <div class="eyebrow">Free prequel novella</div>
+      <h2>Get <em>The Committee Meeting</em> free</h2>
+      <p>1984. A young Dotty, her best friend Ellie, and the Rialto's great chandelier. Join the newsletter for new-release news, behind-the-scenes notes and the occasional report from Penny the Yorkie-poo. One or two emails a month.</p>
+      <a class="btn btn-gold" href="https://mina-marshall.kit.com/e034348724">Send me the story</a>
+    </div>
+  </section>
+
+  <!-- SERIES -->
+  <section class="block" id="books">
+    <div class="wrap">
+      <h2 class="section-title">The Dorothy May Mysteries</h2>
+      <p class="section-sub">Funny, clean small-town cozies set in Port Constance, Ohio, in 1999. A retired court stenographer, a town full of secrets, and a long-running will-they-won't-they with a retired judge.</p>
+      <div class="books">
+        <article class="book">
+          <div class="art"><img src="images/watching-paint-dry.jpg" alt="Watching Paint Dry cover" loading="lazy"></div>
+          <div class="num">Book 1</div>
+          <h3>Watching Paint Dry</h3>
+          <p>A wet mural, a long night and a fall that wasn't an accident.</p>
+          <a class="more" href="#top">Out December 1</a>
+        </article>
+        <article class="book">
+          <div class="art"><div class="placeholder">
+            <svg class="daisy" viewBox="0 0 40 40" aria-hidden="true"><g fill="#fff"><circle cx="20" cy="8" r="6"/><circle cx="31" cy="15" r="6"/><circle cx="28" cy="28" r="6"/><circle cx="12" cy="28" r="6"/><circle cx="9" cy="15" r="6"/></g><circle cx="20" cy="20" r="6" fill="#f2c94c"/></svg>
+            <div class="t">Pulling Pins</div><div class="s">Cover coming soon</div></div></div>
+          <div class="num">Book 2</div>
+          <h3>Pulling Pins</h3>
+          <p>Summer 1999. Dotty's new job: pulling county records for microfilming before Y2K.</p>
+          <a class="more" href="https://pullingpins.minamarshall.com">Coming January 15, 2027</a>
+        </article>
+        <article class="book">
+          <div class="art"><div class="placeholder">
+            <svg class="daisy" viewBox="0 0 40 40" aria-hidden="true"><g fill="#fff"><circle cx="20" cy="8" r="6"/><circle cx="31" cy="15" r="6"/><circle cx="28" cy="28" r="6"/><circle cx="12" cy="28" r="6"/><circle cx="9" cy="15" r="6"/></g><circle cx="20" cy="20" r="6" fill="#f2c94c"/></svg>
+            <div class="t">Mind the Step</div><div class="s">Cover coming soon</div></div></div>
+          <div class="num">Book 3</div>
+          <h3>Mind the Step</h3>
+          <p>Fall 1999. Port Constance has an old secret, and Dotty is about to find it.</p>
+          <a class="more" href="#newsletter">Coming February 15, 2027</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="block about" id="about">
+    <div class="wrap about-grid">
+      <img src="images/mina-and-penny.jpg" width="900" height="1125" loading="lazy"
+           alt="Illustration of Mina Marshall writing at her desk, with Penny the Yorkie-poo supervising from a stack of manuscript pages">
+      <div>
+        <h2>About Mina</h2>
+        <p>Mina Marshall writes funny small-town cozy mysteries with heroines who have lived a little and notice everything. Her stories run on warm communities, sharp-tongued friends and the conviction that nobody overlooks a clue quite like someone the town has overlooked.</p>
+        <p>She writes with a cup of tea at her elbow and Penny the Yorkie-poo on the manuscript pile, where Penny reviews every chapter and has strong opinions about pacing.</p>
+        <a class="btn btn-gold" href="#newsletter">Say hello: join the newsletter</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <!-- TODO: put in the real Instagram and Facebook page URLs -->
+      <a href="https://www.instagram.com/YOUR_HANDLE">Instagram</a>
+      <a href="https://www.facebook.com/YOUR_PAGE">Facebook</a>
+      <a href="https://mina-marshall.kit.com/e034348724">Newsletter</a>
+    </div>
+    <div class="fine">© 2026 Mina Marshall · Story Studio</div>
+  </div>
+</footer>
+
+</body>
+</html>
