@@ -70,7 +70,25 @@
   .newsletter .wrap { position: relative; z-index: 1; max-width: 720px; }
   .newsletter h2 { font-size: clamp(1.6rem, 3.5vw, 2.3rem); }
   .newsletter h2 em { color: var(--gold); }
-  .newsletter p { margin: 0 auto 1.4em; max-width: 56ch; }
+  .newsletter p { margin: 0 0 1em; max-width: 56ch; }
+  .newsletter { text-align: left; }
+  .newsletter .wrap { max-width: 980px; }
+  .nl-grid { display: grid; grid-template-columns: 260px 1fr; gap: 56px; align-items: center; }
+  .nl-cover { border-radius: 4px; box-shadow: 0 18px 50px rgba(0,0,0,.55); transform: rotate(1.5deg); }
+  .nl-hook { font-family: "Libre Baskerville", serif; font-style: italic; color: var(--gold); font-size: 1.1rem; }
+  .nl-form { display: flex; gap: 10px; margin-top: 22px; max-width: 520px; }
+  .nl-form input { flex: 1; min-width: 0; padding: 12px 14px; border-radius: var(--radius); border: 2px solid rgba(250,244,228,.5);
+    background: rgba(255,255,255,.95); color: var(--ink); font: inherit; }
+  .nl-form input:focus { outline: 3px solid var(--gold); outline-offset: 1px; }
+  .nl-form button { border: 0; cursor: pointer; font: inherit; font-weight: 600; white-space: nowrap; }
+  .nl-fine { font-size: .85rem; opacity: .75; margin-top: 10px !important; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  @media (max-width: 760px) {
+    .nl-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+    .nl-cover { max-width: 200px; margin: 0 auto; }
+    .newsletter p { margin-left: auto; margin-right: auto; }
+    .nl-form { flex-direction: column; margin-left: auto; margin-right: auto; }
+  }
 
   /* series */
   section.block { padding: 80px 0; }
@@ -157,11 +175,22 @@
 
   <!-- NEWSLETTER -->
   <section class="newsletter" id="newsletter">
-    <div class="wrap">
-      <div class="eyebrow">Free prequel novella</div>
-      <h2>Get <em>The Committee Meeting</em> free</h2>
-      <p>1984. Dotty, her best friend Ellie, and the Rialto's great chandelier. Join the newsletter for new-release news, behind-the-scenes notes and the occasional report from Penny the Yorkie-poo. One or two emails a month.</p>
-      <a class="btn btn-gold" href="https://mina-marshall.kit.com/e034348724" target="_blank" rel="noopener">Send me the story</a>
+    <div class="wrap nl-grid">
+      <img class="nl-cover" src="images/the-committee-meeting.jpg" width="600" height="960" loading="lazy"
+           alt="Cover of The Committee Meeting, a Dorothy May prequel novella by Mina Marshall">
+      <div>
+        <div class="eyebrow">Free prequel novella</div>
+        <h2>Get <em>The Committee Meeting</em> free</h2>
+        <p class="nl-hook">1984. A doomed chandelier, a committee key, and a great many dish towels.</p>
+        <p>Join the newsletter for new-release news, behind-the-scenes notes and the occasional report from Penny the Yorkie-poo. One or two emails a month.</p>
+        <!-- Kit form 10218392 = the "Never miss a Dorothy May mystery" landing page (same confirmation email and thank-you page) -->
+        <form class="nl-form" action="https://app.kit.com/forms/10218392/subscriptions" method="post">
+          <label class="sr-only" for="nl-email">Email address</label>
+          <input id="nl-email" type="email" name="email_address" placeholder="Your email address" required autocomplete="email">
+          <button class="btn btn-gold" type="submit">Send me the story</button>
+        </form>
+        <p class="nl-fine">No spam. Unsubscribe any time.</p>
+      </div>
     </div>
   </section>
 
